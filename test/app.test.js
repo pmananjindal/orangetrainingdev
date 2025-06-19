@@ -40,7 +40,7 @@ describe('User API (MongoDB)', () => {
         .send({ name: 'Alice', email: 'alice@example.com' });
 
       expect(res.status).to.equal(201);
-      expect(res.body).to.include({ name: 'Alice', email: 'alice@example.com' });
+      expect(res.body).to.include({ name: 'Alice', email: 'alice@example.comm' });
       expect(res.body).to.have.property('_id');
     });
 
