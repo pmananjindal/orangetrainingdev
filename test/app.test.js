@@ -32,6 +32,13 @@ describe('User API (MongoDB)', () => {
       expect(res.body).to.have.property('message', 'Hello, world!');
     });
   });
+  describe('GET /bye', () => {
+    it('should return bye message', async () => {
+      const res = await request(app).get('/bye');
+      expect(res.status).to.equal(200);
+      expect(res.body).to.have.property('message', 'Hello, world!');
+    });
+  });
 
   describe('POST /users', () => {
     it('should create a user with name and email', async () => {
